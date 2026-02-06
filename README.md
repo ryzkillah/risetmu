@@ -54,7 +54,7 @@ Sumber resmi:
 - **UNSW-NB15**  
   https://research.unsw.edu.au/projects/unsw-nb15-dataset
 
-Dataset mentah dan dataset penuh **diarsipkan secara terpisah** (misalnya Zenodo)
+Dataset mentah dan dataset penuh **diarsipkan secara terpisah** di Zenodo 10.5281/zenodo.18509357
 untuk keperluan replikasi dan sitasi ilmiah.
 
 ---
