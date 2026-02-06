@@ -1,0 +1,196 @@
+{
+    "metadata": {
+        "timestamp": "2026-01-19T01:47:00.899312",
+        "model": "XGBoost",
+        "accuracy": 0.9986,
+        "f1_score": 0.9964,
+        "n_samples": 50000,
+        "attack_ratio": 0.19614
+    },
+    "feature_importance": {
+        "xgboost_top10": [
+            {
+                "feature": "Bwd Packet Length Std",
+                "importance": 0.2942645847797394
+            },
+            {
+                "feature": "Average Packet Size",
+                "importance": 0.21067972481250763
+            },
+            {
+                "feature": "Bwd Header Length",
+                "importance": 0.18178337812423706
+            },
+            {
+                "feature": "Max Packet Length",
+                "importance": 0.09276372939348221
+            },
+            {
+                "feature": "Bwd Packet Length Min",
+                "importance": 0.04630514606833458
+            },
+            {
+                "feature": "Fwd Packet Length Std",
+                "importance": 0.03320224955677986
+            },
+            {
+                "feature": "FIN Flag Count",
+                "importance": 0.01316059846431017
+            },
+            {
+                "feature": "Active Std",
+                "importance": 0.012181490659713745
+            },
+            {
+                "feature": "Destination Port",
+                "importance": 0.012178894132375717
+            },
+            {
+                "feature": "Packet Length Mean",
+                "importance": 0.011429725214838982
+            }
+        ],
+        "permutation_top10": [
+            {
+                "feature": "Destination Port",
+                "importance": 0.06369999999999998
+            },
+            {
+                "feature": "Init_Win_bytes_forward",
+                "importance": 0.045200000000000004
+            },
+            {
+                "feature": "Bwd Packet Length Std",
+                "importance": 0.023899999999999977
+            },
+            {
+                "feature": "min_seg_size_forward",
+                "importance": 0.01034999999999998
+            },
+            {
+                "feature": "Average Packet Size",
+                "importance": 0.007049999999999978
+            },
+            {
+                "feature": "Fwd IAT Min",
+                "importance": 0.006249999999999978
+            },
+            {
+                "feature": "Bwd Header Length",
+                "importance": 0.003049999999999975
+            },
+            {
+                "feature": "Init_Win_bytes_backward",
+                "importance": 0.0006999999999999784
+            },
+            {
+                "feature": "Flow IAT Min",
+                "importance": 0.0006999999999999674
+            },
+            {
+                "feature": "Fwd Packet Length Std",
+                "importance": 0.0005499999999999839
+            }
+        ]
+    },
+    "sample_explanations": [
+        {
+            "sample_id": 1,
+            "actual": "Attack",
+            "predicted": "Attack",
+            "confidence_attack": 0.9999902248382568,
+            "confidence_normal": 9.775161743164062e-06,
+            "top_features": [
+                {
+                    "feature": "Bwd Packet Length Std",
+                    "value": 2.1474642811854614,
+                    "interpretation": "High"
+                },
+                {
+                    "feature": "Max Packet Length",
+                    "value": 2.4086773664718852,
+                    "interpretation": "High"
+                },
+                {
+                    "feature": "Flow Duration",
+                    "value": 2.538888311144893,
+                    "interpretation": "High"
+                },
+                {
+                    "feature": "Bwd Packet Length Max",
+                    "value": 2.5485685555550415,
+                    "interpretation": "High"
+                },
+                {
+                    "feature": "Bwd Packet Length Mean",
+                    "value": 2.2500384606597463,
+                    "interpretation": "High"
+                }
+            ]
+        },
+        {
+            "sample_id": 2,
+            "actual": "Attack",
+            "predicted": "Attack",
+            "confidence_attack": 0.9996967315673828,
+            "confidence_normal": 0.0003032684326171875,
+            "top_features": [
+                {
+                    "feature": "FIN Flag Count",
+                    "value": 5.210993495781566,
+                    "interpretation": "High"
+                }
+            ]
+        },
+        {
+            "sample_id": 3,
+            "actual": "Normal",
+            "predicted": "Normal",
+            "confidence_attack": 2.7126307031721808e-05,
+            "confidence_normal": 0.9999728798866272,
+            "top_features": [
+                {
+                    "feature": "Destination Port",
+                    "value": 2.3134258930459675,
+                    "interpretation": "High"
+                },
+                {
+                    "feature": "Init_Win_bytes_backward",
+                    "value": 3.670246534241388,
+                    "interpretation": "High"
+                },
+                {
+                    "feature": "URG Flag Count",
+                    "value": 3.092190314144282,
+                    "interpretation": "High"
+                }
+            ]
+        },
+        {
+            "sample_id": 4,
+            "actual": "Normal",
+            "predicted": "Normal",
+            "confidence_attack": 6.883736659801798e-06,
+            "confidence_normal": 0.9999931454658508,
+            "top_features": [
+                {
+                    "feature": "Bwd Packet Length Min",
+                    "value": 2.1338376684749663,
+                    "interpretation": "High"
+                }
+            ]
+        }
+    ],
+    "model_interpretation": {
+        "key_features_identified": [
+            "Bwd Packet Length Std",
+            "Average Packet Size",
+            "Bwd Header Length",
+            "Max Packet Length",
+            "Bwd Packet Length Min"
+        ],
+        "interpretation": "The model primarily relies on network flow characteristics and packet statistics to distinguish attacks from normal traffic.",
+        "transparency_achieved": true,
+        "meets_research_goals": true
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "dataset_name": "UNSW-NB15 Full Merged",
+    "total_samples": 2540043,
+    "total_features": 139,
+    "label_distribution": {},
+    "attack_distribution": {},
+    "feature_types": {
+        "float64": 107,
+        "object": 22,
+        "int64": 10
+    },
+    "files_merged": [
+        "UNSW-NB15_1.csv",
+        "UNSW-NB15_2.csv",
+        "UNSW-NB15_3.csv",
+        "UNSW-NB15_4.csv"
+    ],
+    "merge_timestamp": "2026-01-19 02:57:01",
+    "processing_time": 254.5625603199005
+}

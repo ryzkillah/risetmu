@@ -1,0 +1,31 @@
+{
+    "best_model": "XGBoost",
+    "best_accuracy": 0.9985985985985986,
+    "best_f1_score": 0.9964230965763924,
+    "all_results": {
+        "Logistic Regression": {
+            "accuracy": 0.9384384384384384,
+            "f1": 0.8580004617871161
+        },
+        "Decision Tree": {
+            "accuracy": 0.9961961961961961,
+            "f1": 0.9902663934426229
+        },
+        "Random Forest": {
+            "accuracy": 0.9974974974974975,
+            "f1": 0.9936012285641157
+        },
+        "XGBoost": {
+            "accuracy": 0.9985985985985986,
+            "f1": 0.9964230965763924
+        }
+    },
+    "data_info": {
+        "n_samples": 49946,
+        "n_features": 78,
+        "n_attack": 9789,
+        "n_normal": 40157,
+        "attack_ratio": 0.19599167100468506
+    },
+    "processing_time": 5.676668167114258
+}
